@@ -35,10 +35,6 @@ DELIMITER ;
 -- Call Procedure
 CALL SP_IncrSalByDept(10);
 
--- =======================================================================
-
-SHOW PROCEDURE STATUS WHERE Db = 'demo';
-select * from emp;
 -- =========================================================================
 /* Procedure with output parameter */
 
@@ -241,6 +237,12 @@ DELIMITER ;
 -- Execute
 CALL sp_BankStatement('2025-01-01','2025-01-31');
 -- ===========================================================================================================================
+-- Command to delete the function.
+DROP FUNCTION IF EXISTS calc;
+
+-- Command to show the procedures
+SHOW PROCEDURE STATUS WHERE Db = 'demo';
+
 
 
 
